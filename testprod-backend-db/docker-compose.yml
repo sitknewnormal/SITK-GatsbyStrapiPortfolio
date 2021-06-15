@@ -1,0 +1,25 @@
+version: '3.8'
+services:
+  backend2:
+    image: sitk/sitk-strapi
+    container_name: backend2
+    # restart: unless-stopped
+    ports:
+      - "1337:1337"
+    environment: 
+      HOST: "0.0.0.0"
+      PORT: "1337"
+      DATABASE_CLIENT: "mongo"
+      DATABASE_NAME: "strapi"
+      DATABASE_HOST: "db2"
+      DATABASE_PORT: "27017"
+      DATABASE_USERNAME: "sitkstrapi"
+      DATABASE_PASSWORD: "sitkstrapi"
+  db2:
+    image: mongo
+    container_name: db2
+    ports:
+      - "27017:27017"
+    environment: 
+      MONGO_INITDB_ROOT_USERNAME: "sitkstrapi"
+      MONGO_INITDB_ROOT_PASSWORD: "sitkstrapi"

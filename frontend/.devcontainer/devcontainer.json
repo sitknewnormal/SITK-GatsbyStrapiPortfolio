@@ -1,0 +1,15 @@
+{
+	"name": "Frontend-Gatsby Strapi Portfolio",
+	"dockerComposeFile": ["../../docker-compose.yml"],
+	"service": "frontend",
+	// "shutdownAction": "none" => Prevents you from accidentally shutting down both containers by closing one VSCode window.
+	"shutdownAction": "none",
+	"workspaceMount": "source=${localWorkspaceFolder}/frontend,target=/workspace/frontend,type=bind,consistency=delegated",
+	// Open the sub-folder with the source code
+	"workspaceFolder": "/workspace/frontend",
+	"extensions": [
+		"eamodio.gitlens",
+		"esbenp.prettier-vscode",
+		"ms-azuretools.vscode-docker"
+	],
+}

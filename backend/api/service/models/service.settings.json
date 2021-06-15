@@ -1,0 +1,39 @@
+{
+  "kind": "collectionType",
+  "collectionName": "services",
+  "info": {
+    "name": "Service",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text",
+      "required": true
+    },
+    "FontAwesome": {
+      "type": "enumeration",
+      "enum": [
+        "FaCode",
+        "FaSketch",
+        "FaAndroid",
+        "FaDatabase",
+        "FaKey",
+        "FaPlug"
+      ]
+    },
+    "order": {
+      "type": "integer",
+      "required": true,
+      "unique": true
+    }
+  }
+}

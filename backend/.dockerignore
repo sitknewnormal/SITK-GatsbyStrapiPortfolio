@@ -1,0 +1,9 @@
+node_modules
+.cache
+.devcontainer
+.git
+build
+.editorconfig
+.env.example
+buildprod.sh
+Dockerfile.prod

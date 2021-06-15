@@ -1,0 +1,9 @@
+{
+	"name": "DB-Gatsby Strapi Portfolio",
+	"dockerComposeFile": ["../../docker-compose.yml"],
+	"service": "db",
+	// "shutdownAction": "none" => Prevents you from accidentally shutting down both containers by closing one window.
+	"shutdownAction": "none",
+	// Open the sub-folder with the source code
+	"workspaceFolder": "/workspace/db"
+  }

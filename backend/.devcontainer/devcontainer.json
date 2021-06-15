@@ -1,0 +1,9 @@
+{
+	"name": "Backend-Gatsby Strapi Portfolio",
+	"dockerComposeFile": ["../../docker-compose.yml"],
+	"service": "backend",
+	// "shutdownAction": "none" => Prevents you from accidentally shutting down both containers by closing one VScode window.
+	"shutdownAction": "none",
+	// Open the sub-folder with the source code
+	"workspaceFolder": "/workspace/backend"
+  }

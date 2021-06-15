@@ -1,0 +1,26 @@
+{
+  "kind": "collectionType",
+  "collectionName": "articles",
+  "info": {
+    "name": "article"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": false
+    },
+    "date": {
+      "type": "date",
+      "required": true
+    },
+    "content": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

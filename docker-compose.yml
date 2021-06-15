@@ -1,0 +1,44 @@
+version: '3.8'
+services:
+  frontend:
+    # Points to Dockerfile
+    build: ./frontend/.devcontainer
+    container_name: frontend
+    volumes: 
+      # Persist bash history between runs
+      - frontend-bashhistory:/commandhistory
+      # Mount the root folder that contains .git
+      - .:/workspace:cached
+    command: /bin/bash -c "while sleep 1000; do :; done"
+
+  backend:
+    build: ./backend/.devcontainer
+    container_name: backend
+    # restart: unless-stopped
+    env_file: ./backend/.devcontainer/.env
+    volumes:
+      # Persist bash history between runs
+      - backend-bashhistory:/commandhistory
+      # Mount the root folder that contains .git
+      - .:/workspace:cached
+      - ./backend:/srv/app
+    ports:
+      - "1337:1337"
+
+  db:
+    build: ./db/.devcontainer
+    container_name: db
+    # restart: unless-stopped
+    env_file: ./db/.devcontainer/.env
+    volumes:
+      - .:/workspace:cached
+      - db-bashhistory:/commandhistory
+      - strapidata:/data/db
+    ports:
+      - "27017:27017"
+
+volumes:
+  frontend-bashhistory:
+  backend-bashhistory:
+  db-bashhistory:
+  strapidata:

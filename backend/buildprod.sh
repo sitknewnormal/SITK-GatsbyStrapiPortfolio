@@ -1,0 +1,1 @@
+docker build --force-rm=true --no-cache=true -t sitk/sitk-strapi -f Dockerfile.prod .

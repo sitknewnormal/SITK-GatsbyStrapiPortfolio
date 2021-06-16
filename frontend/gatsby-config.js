@@ -31,7 +31,7 @@ module.exports = {
       options: {
         apiURL: `http://192.168.2.217:1337`,
         queryLimit: 1000, // Default to 100
-        contentTypes: [`job`, `project`, `service`],
+        contentTypes: [`job`, `project`, `service`, `socialmedia`],
         //If using single types place them in this array.
         singleTypes: [`about`],
         // Possibility to login with a strapi user, when content types are not publically available (optional).

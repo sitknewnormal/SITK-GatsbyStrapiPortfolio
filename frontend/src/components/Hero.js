@@ -1,6 +1,6 @@
 import React from "react"
 import { Link } from "gatsby"
-import socialLinks from "../constants/social_links"
+import SocialLinks from "../components/SocialLinks"
 // import heroImg from "../assets/images/hero.svg"
 import { StaticImage } from "gatsby-plugin-image"
 
@@ -17,13 +17,7 @@ const Hero = () => {
               contact me
             </Link>
             <div className="social-links">
-              {socialLinks.map(link => {
-                return (
-                  <a href={link.url} key={link.id} className="social-link">
-                    {link.icon}
-                  </a>
-                )
-              })}
+              <SocialLinks isSideBar={false}/>
             </div>
           </div>
         </article>

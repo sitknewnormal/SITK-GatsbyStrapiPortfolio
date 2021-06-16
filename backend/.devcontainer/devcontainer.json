@@ -4,7 +4,6 @@
 	"service": "backend",
 	// "shutdownAction": "none" => Prevents you from accidentally shutting down both containers by closing one VScode window.
 	"shutdownAction": "none",
-	"workspaceMount": "source=${localWorkspaceFolder}/backend,target=/workspace/backend,type=bind,consistency=delegated",
 	// Open the sub-folder with the source code
 	"workspaceFolder": "/workspace/backend"
   }

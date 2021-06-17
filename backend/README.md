@@ -61,4 +61,4 @@ Running at http://localhost:8000/
 - [Strapi Styled Component](https://buffetjs.io/storybook/?path=/story/components--button)
 
 ## Quick notes
-- Import of model that contains component fields are not working.
+- Import of model that contains component fields is not working.

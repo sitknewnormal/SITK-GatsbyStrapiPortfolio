@@ -59,3 +59,6 @@ Running at http://localhost:8000/
 - [Strapi Content Import Plugin](https://github.com/strapi/community-content/tree/master/tutorials/code/import-content-plugin-tutorial/plugins/import-content)
 - [Guide to Strapi Content Import Plugin](https://strapi.io/blog/how-to-create-an-import-content-plugin-part-1-4?redirectPage=3)
 - [Strapi Styled Component](https://buffetjs.io/storybook/?path=/story/components--button)
+
+## Quick notes
+- Import of model that contains component fields are not working.

@@ -23,15 +23,15 @@ cd /<path-to-your-strapi-project
 cd plugins
 
 # clone the plugin code into a folder and skip the prefix
-git clone git@github.com:lazurey/strapi-plugin-content-export-import.git content-export-import
+git clone https://github.com/lazurey/strapi-plugin-content-export-import content-export-import
 # install dependencies
-cd content-export-import && yarn install
+cd content-export-import && npm install
 # build the plugin
 cd ../..
-yarn build
+npm run-script build
 
 # start
-yarn develop
+npm develop
 ```
 
 Note:
@@ -39,7 +39,7 @@ Note:
 
 ## Plugin development
 ```bash
-yarn develop --watch-admin
+npm develop --watch-admin
 ```
 Running at http://localhost:8000/
 
